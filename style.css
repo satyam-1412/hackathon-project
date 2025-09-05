@@ -1,0 +1,146 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    border-bottom: 2px solid #444;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #8b5fbf;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #cccccc;
+}
+
+/* Sections */
+section {
+    background-color: #2a2a2a;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+section h2 {
+    color: #8b5fbf;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Form Styles */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.input-group.half {
+    flex: 0.5;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #8b5fbf;
+    background-color: #404040;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+select[multiple] {
+    height: 80px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #333;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.skill-item:hover {
+    background-color: #404040;
+}
+
+.skill-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    accent-color: #8b5fbf;
+}
+
