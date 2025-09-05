@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Team Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hackathon Team Builder</h1>
+            <p>Create teams with different coding skills</p>
+        </header>
+
+        <!-- Team Requirements -->
+        <section>
+            <h2>Create Team Requirement</h2>
+            <form id="requirementForm">
+                <input type="text" id="teamName" placeholder="Team/Project Name" required>
+                <select id="teamSize" required>
+                    <option value="">Team Size</option>
+                    <option value="2">2 members</option>
+                    <option value="3">3 members</option>
+                    <option value="4">4 members</option>
+                </select>
+                <textarea id="description" placeholder="Project description"></textarea>
+                
+                <div class="skills">
+                    <label>Required Skills:</label>
+                    <label><input type="checkbox" name="req-skills" value="frontend"> Frontend</label>
+                    <label><input type="checkbox" name="req-skills" value="backend"> Backend</label>
+                    <label><input type="checkbox" name="req-skills" value="mobile"> Mobile</label>
+                    <label><input type="checkbox" name="req-skills" value="design"> Design</label>
+                </div>
+                
+                <button type="submit">Create Requirement</button>
+            </form>
+        </section>
+
+        <!-- User Registration -->
+        <section>
+            <h2>Register Your Skills</h2>
+            <form id="userForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <input type="email" id="userEmail" placeholder="Email" required>
+                <select id="experience" required>
+                    <option value="">Experience Level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                
+                <div class="skills">
+                    <label>Your Skills:</label>
+                    <label><input type="checkbox" value="frontend"> Frontend</label>
+                    <label><input type="checkbox" value="backend"> Backend</label>
+                    <label><input type="checkbox" value="mobile"> Mobile</label>
+                    <label><input type="checkbox" value="design"> Design</label>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Requirements List -->
+        <section id="reqSection" style="display: none;">
+            <h2>Team Requirements</h2>
+            <div id="reqList"></div>
+        </section>
+
+        <!-- Users List -->
+        <section id="userSection" style="display: none;">
+            <h2>Registered Users</h2>
+            <div id="userList"></div>
+        </section>
+
+        <!-- Teams -->
+        <section id="teamSection" style="display: none;">
+            <h2>Formed Teams</h2>
+            <div id="teamList"></div>
+            <button id="matchBtn">Match Teams</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
