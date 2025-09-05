@@ -132,3 +132,84 @@
                         </select>
                     </div>
                 </div>
+                <!-- Experience and Collaboration -->
+                <div class="form-row">
+                    <div class="input-group half">
+                        <label for="experienceLevel">Required Experience Level</label>
+                        <select id="experienceLevel" required>
+                            <option value="">Any level</option>
+                            <option value="beginner">Beginner friendly</option>
+                            <option value="intermediate">Intermediate+</option>
+                            <option value="advanced">Advanced only</option>
+                            <option value="mixed">Mixed levels preferred</option>
+                        </select>
+                    </div>
+                    <div class="input-group half">
+                        <label for="workStyle">Work Style</label>
+                        <select id="workStyle" required>
+                            <option value="">Select style</option>
+                            <option value="collaborative">Highly Collaborative</option>
+                            <option value="independent">Independent Work</option>
+                            <option value="mixed">Mixed Approach</option>
+                            <option value="agile">Agile/Scrum</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Communication and Location -->
+                <div class="form-row">
+                    <div class="input-group half">
+                        <label for="communicationStyle">Communication Preference</label>
+                        <select id="communicationStyle" required>
+                            <option value="">Select preference</option>
+                            <option value="frequent">Frequent Check-ins</option>
+                            <option value="moderate">Moderate Communication</option>
+                            <option value="minimal">Minimal Meetings</option>
+                            <option value="async">Async Communication</option>
+                        </select>
+                    </div>
+                    <div class="input-group half">
+                        <label for="location">Location Preference</label>
+                        <select id="location" required>
+                            <option value="">Select location</option>
+                            <option value="remote">Remote Only</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="in-person">In-Person</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Additional Requirements -->
+                <div class="input-group">
+                    <label for="additionalRequirements">Additional Requirements</label>
+                    <textarea id="additionalRequirements" rows="2" placeholder="Any specific requirements, tools, or preferences..."></textarea>
+                </div>
+
+                <!-- Priority and Goals -->
+                <div class="form-row">
+                    <div class="input-group half">
+                        <label for="projectGoal">Primary Goal</label>
+                        <select id="projectGoal" required>
+                            <option value="">Select goal</option>
+                            <option value="winning">Winning Competition</option>
+                            <option value="learning">Learning & Growth</option>
+                            <option value="networking">Networking</option>
+                            <option value="portfolio">Portfolio Building</option>
+                            <option value="fun">Fun & Experience</option>
+                        </select>
+                    </div>
+                    <div class="input-group half">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" required>
+                            <option value="">Select urgency</option>
+                            <option value="high">High - Need team ASAP</option>
+                            <option value="medium">Medium - Within a week</option>
+                            <option value="low">Low - Flexible timing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Team Requirement</button>
+            </form>
+        </section>
