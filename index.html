@@ -3,78 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="Enhanced hackathon team builder with comprehensive requirements">
-    <title>Hackathon Team Builder</title>
+    <meta property="og:description" content="Simple hackathon team builder - match developers with different coding skills">
+    <title>Hackathon Team Maker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com/"></script>
 </head>
 <body>
     <div class="container">
         <!-- Header Section -->
         <header class="header">
-            <h1>Hackathon Team Builder</h1>
-            <p>Create perfect teams with detailed requirements and skill matching</p>
+            <h1>Hackathon Team Maker</h1>
+            <p>Build teams with different coding skills</p>
         </header>
 
         <!-- Team Requirements Section -->
         <section class="requirements-section">
-            <h2>Create Detailed Team Requirements</h2>
+            <h2>Create Team Requirements</h2>
             <form id="requirementForm">
-                <!-- Basic Team Info -->
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="teamName">Project/Team Name</label>
-                        <input type="text" id="teamName" required placeholder="e.g., AI-Powered Food Delivery App">
-                    </div>
-                    <div class="input-group half">
-                        <label for="teamSize">Team Size</label>
-                        <select id="teamSize" required>
-                            <option value="">Select size</option>
-                            <option value="2">2 members</option>
-                            <option value="3">3 members</option>
-                            <option value="4">4 members</option>
-                            <option value="5">5 members</option>
-                            <option value="6">6 members</option>
-                        </select>
-                    </div>
+                <div class="input-group">
+                    <label for="teamName">Team/Project Name</label>
+                    <input type="text" id="teamName" required placeholder="e.g., Mobile E-commerce App">
                 </div>
 
                 <div class="input-group">
-                    <label for="projectDescription">Project Description</label>
-                    <textarea id="projectDescription" rows="3" placeholder="Detailed description of what you're building..."></textarea>
+                    <label for="teamDescription">Project Description</label>
+                    <textarea id="teamDescription" rows="3" placeholder="Brief description of the project"></textarea>
                 </div>
 
-                <!-- Project Category and Timeline -->
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="projectCategory">Project Category</label>
-                        <select id="projectCategory" required>
-                            <option value="">Select category</option>
-                            <option value="web-app">Web Application</option>
-                            <option value="mobile-app">Mobile App</option>
-                            <option value="ai-ml">AI/Machine Learning</option>
-                            <option value="blockchain">Blockchain</option>
-                            <option value="iot">IoT/Hardware</option>
-                            <option value="game">Game Development</option>
-                            <option value="data-science">Data Science</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="input-group half">
-                        <label for="timeline">Project Timeline</label>
-                        <select id="timeline" required>
-                            <option value="">Select timeline</option>
-                            <option value="24-hours">24 Hours</option>
-                            <option value="48-hours">48 Hours</option>
-                            <option value="72-hours">3 Days</option>
-                            <option value="1-week">1 Week</option>
-                            <option value="flexible">Flexible</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Required Skills -->
                 <div class="input-group">
-                    <label>Required Skills (select all needed)</label>
+                    <label for="teamSize">Team Size Needed</label>
+                    <select id="teamSize" required>
+                        <option value="">Select team size</option>
+                        <option value="2">2 members</option>
+                        <option value="3">3 members</option>
+                        <option value="4">4 members</option>
+                        <option value="5">5 members</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Required Skills (select what you need)</label>
                     <div class="skills-grid">
                         <label class="skill-item">
                             <input type="checkbox" name="required-skills" value="frontend"> Frontend Developer
@@ -83,233 +51,89 @@
                             <input type="checkbox" name="required-skills" value="backend"> Backend Developer
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="fullstack"> Full-Stack Developer
-                        </label>
-                        <label class="skill-item">
                             <input type="checkbox" name="required-skills" value="mobile"> Mobile Developer
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="ui-ux"> UI/UX Designer
+                            <input type="checkbox" name="required-skills" value="database"> Database Expert
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="data-scientist"> Data Scientist
+                            <input type="checkbox" name="required-skills" value="ui-design"> UI/UX Designer
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="ai-ml"> AI/ML Engineer
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="devops"> DevOps Engineer
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="blockchain"> Blockchain Developer
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="game-dev"> Game Developer
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="cybersecurity"> Cybersecurity Expert
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" name="required-skills" value="project-manager"> Project Manager
+                            <input type="checkbox" name="required-skills" value="ai"> AI/ML Specialist
                         </label>
                     </div>
                 </div>
 
-                <!-- Technology Preferences -->
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="techStack">Preferred Tech Stack</label>
-                        <input type="text" id="techStack" placeholder="e.g., React, Node.js, Python, MongoDB">
-                    </div>
-                    <div class="input-group half">
-                        <label for="platforms">Target Platforms</label>
-                        <select id="platforms" multiple>
-                            <option value="web">Web</option>
-                            <option value="ios">iOS</option>
-                            <option value="android">Android</option>
-                            <option value="desktop">Desktop</option>
-                            <option value="cloud">Cloud</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Experience and Collaboration -->
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="experienceLevel">Required Experience Level</label>
-                        <select id="experienceLevel" required>
-                            <option value="">Any level</option>
-                            <option value="beginner">Beginner friendly</option>
-                            <option value="intermediate">Intermediate+</option>
-                            <option value="advanced">Advanced only</option>
-                            <option value="mixed">Mixed levels preferred</option>
-                        </select>
-                    </div>
-                    <div class="input-group half">
-                        <label for="workStyle">Work Style</label>
-                        <select id="workStyle" required>
-                            <option value="">Select style</option>
-                            <option value="collaborative">Highly Collaborative</option>
-                            <option value="independent">Independent Work</option>
-                            <option value="mixed">Mixed Approach</option>
-                            <option value="agile">Agile/Scrum</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Communication and Location -->
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="communicationStyle">Communication Preference</label>
-                        <select id="communicationStyle" required>
-                            <option value="">Select preference</option>
-                            <option value="frequent">Frequent Check-ins</option>
-                            <option value="moderate">Moderate Communication</option>
-                            <option value="minimal">Minimal Meetings</option>
-                            <option value="async">Async Communication</option>
-                        </select>
-                    </div>
-                    <div class="input-group half">
-                        <label for="location">Location Preference</label>
-                        <select id="location" required>
-                            <option value="">Select location</option>
-                            <option value="remote">Remote Only</option>
-                            <option value="hybrid">Hybrid</option>
-                            <option value="in-person">In-Person</option>
-                            <option value="flexible">Flexible</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Additional Requirements -->
                 <div class="input-group">
-                    <label for="additionalRequirements">Additional Requirements</label>
-                    <textarea id="additionalRequirements" rows="2" placeholder="Any specific requirements, tools, or preferences..."></textarea>
-                </div>
-
-                <!-- Priority and Goals -->
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="projectGoal">Primary Goal</label>
-                        <select id="projectGoal" required>
-                            <option value="">Select goal</option>
-                            <option value="winning">Winning Competition</option>
-                            <option value="learning">Learning & Growth</option>
-                            <option value="networking">Networking</option>
-                            <option value="portfolio">Portfolio Building</option>
-                            <option value="fun">Fun & Experience</option>
-                        </select>
-                    </div>
-                    <div class="input-group half">
-                        <label for="urgency">Urgency Level</label>
-                        <select id="urgency" required>
-                            <option value="">Select urgency</option>
-                            <option value="high">High - Need team ASAP</option>
-                            <option value="medium">Medium - Within a week</option>
-                            <option value="low">Low - Flexible timing</option>
-                        </select>
-                    </div>
+                    <label for="experienceLevel">Preferred Experience Level</label>
+                    <select id="experienceLevel" required>
+                        <option value="">Any level</option>
+                        <option value="beginner">Beginner friendly</option>
+                        <option value="intermediate">Intermediate+</option>
+                        <option value="advanced">Advanced only</option>
+                        <option value="mixed">Mixed levels</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="submit-btn">Create Team Requirement</button>
             </form>
         </section>
 
-        <!-- User Registration Section -->
+        <!-- Registration Form -->
         <section class="form-section">
-            <h2>Register Your Skills</h2>
+            <h2>Add Your Skills</h2>
             <form id="userForm">
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="userName">Your Name</label>
-                        <input type="text" id="userName" required>
-                    </div>
-                    <div class="input-group half">
-                        <label for="userEmail">Email</label>
-                        <input type="email" id="userEmail" required>
-                    </div>
+                <div class="input-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" required>
                 </div>
 
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="experience">Experience Level</label>
-                        <select id="experience" required>
-                            <option value="">Choose Level</option>
-                            <option value="beginner">Beginner (0-2 years)</option>
-                            <option value="intermediate">Intermediate (2-5 years)</option>
-                            <option value="advanced">Advanced (5+ years)</option>
-                        </select>
-                    </div>
-                    <div class="input-group half">
-                        <label for="availability">Availability</label>
-                        <select id="availability" required>
-                            <option value="">Select availability</option>
-                            <option value="full-time">Full-time commitment</option>
-                            <option value="part-time">Part-time (evenings/weekends)</option>
-                            <option value="flexible">Flexible schedule</option>
-                        </select>
-                    </div>
+                <div class="input-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Experience Level</label>
+                    <select id="experience" required>
+                        <option value="">Choose Level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
                 </div>
 
                 <div class="input-group">
                     <label>Your Skills (check all that apply)</label>
                     <div class="skills-grid">
                         <label class="skill-item">
-                            <input type="checkbox" value="frontend"> Frontend Development
+                            <input type="checkbox" value="frontend"> Frontend
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" value="backend"> Backend Development
+                            <input type="checkbox" value="backend"> Backend
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" value="fullstack"> Full-Stack Development
+                            <input type="checkbox" value="mobile"> Mobile Apps
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" value="mobile"> Mobile Development
+                            <input type="checkbox" value="database"> Database
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" value="ui-ux"> UI/UX Design
+                            <input type="checkbox" value="ui-design"> UI Design
                         </label>
                         <label class="skill-item">
-                            <input type="checkbox" value="data-scientist"> Data Science
+                            <input type="checkbox" value="ai"> AI/ML
                         </label>
-                        <label class="skill-item">
-                            <input type="checkbox" value="ai-ml"> AI/Machine Learning
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" value="devops"> DevOps
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" value="blockchain"> Blockchain
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" value="game-dev"> Game Development
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" value="cybersecurity"> Cybersecurity
-                        </label>
-                        <label class="skill-item">
-                            <input type="checkbox" value="project-manager"> Project Management
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="input-group half">
-                        <label for="technologies">Technologies/Languages</label>
-                        <input type="text" id="technologies" placeholder="e.g. JavaScript, Python, React, etc.">
-                    </div>
-                    <div class="input-group half">
-                        <label for="portfolio">Portfolio/GitHub</label>
-                        <input type="url" id="portfolio" placeholder="https://github.com/yourname">
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <label for="userBio">Brief Bio</label>
-                    <textarea id="userBio" rows="2" placeholder="Tell us about yourself and your interests..."></textarea>
+                    <label for="languages">Programming Languages</label>
+                    <input type="text" id="languages" placeholder="e.g. JavaScript, Python, Java">
                 </div>
 
-                <button type="submit" class="submit-btn">Register & Find Teams</button>
+                <button type="submit" class="submit-btn">Join & Find Team</button>
             </form>
         </section>
 
@@ -321,15 +145,15 @@
 
         <!-- Users List -->
         <section class="users-section" id="usersSection" style="display: none;">
-            <h2>Registered Developers</h2>
+            <h2>Registered Users</h2>
             <div id="usersList"></div>
         </section>
 
         <!-- Matched Teams Section -->
         <section class="teams-section" id="teamsSection" style="display: none;">
-            <h2>Formed Teams</h2>
+            <h2>Matched Teams</h2>
             <div id="teamsList"></div>
-            <button id="matchTeamsBtn" class="team-btn">Run Smart Matching</button>
+            <button id="matchTeamsBtn" class="team-btn">Match Users to Requirements</button>
         </section>
     </div>
 
